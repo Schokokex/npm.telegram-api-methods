@@ -1,0 +1,33 @@
+{
+  "name": "telegram-bot-methods",
+  "version": "5.0.0",
+  "description": "An abstract class for the Telegram Api Methods",
+  "main": "lib/TelegramApi.js",
+  "dependencies": {
+    "telegram-bot-types": "^5.0.6"
+  },
+  "devDependencies": {
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npx tslint --project . && npx tsc && npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schokokex/npm.telegram-bot-methods.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "api",
+    "methods"
+  ],
+  "author": "schokokex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schokokex/npm.telegram-bot-methods/issues"
+  },
+  "homepage": "https://github.com/Schokokex/npm.telegram-bot-methods#readme"
+}
