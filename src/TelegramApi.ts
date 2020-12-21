@@ -34,6 +34,8 @@ export type FetchResult<T = any> =
   | { ok: true; result: T; description: undefined }
   | { ok: false; error_code: number; description: string; result: undefined };
 
+type ParseMode = 'MarkdownV2' | 'HTML' | 'Markdown';
+
 export default abstract class TelegramApi {
   readonly BASE_URL = "https://api.telegram.org/bot";
 
@@ -153,7 +155,7 @@ export default abstract class TelegramApi {
   async sendMessage(obj: {
     chat_id: number | string;
     text: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     entities?: MessageEntity[];
     disable_web_page_preview?: boolean;
     disable_notification?: boolean;
@@ -217,7 +219,7 @@ export default abstract class TelegramApi {
     from_chat_id: number | string;
     message_id: number;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     disable_notification?: boolean;
     reply_to_message_id?: number;
@@ -258,7 +260,7 @@ export default abstract class TelegramApi {
     chat_id: number | string;
     photo: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     disable_notification?: boolean;
     reply_to_message_id?: number;
@@ -302,7 +304,7 @@ export default abstract class TelegramApi {
     chat_id: number | string;
     audio: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     duration?: number;
     performer?: string;
@@ -353,7 +355,7 @@ export default abstract class TelegramApi {
     document: InputFile | string;
     thumb?: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     disable_content_type_detection?: boolean;
     disable_notification?: boolean;
@@ -405,7 +407,7 @@ export default abstract class TelegramApi {
     height?: number;
     thumb?: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     supports_streaming?: boolean;
     disable_notification?: boolean;
@@ -459,7 +461,7 @@ export default abstract class TelegramApi {
     height?: number;
     thumb?: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     disable_notification?: boolean;
     reply_to_message_id?: number;
@@ -504,7 +506,7 @@ export default abstract class TelegramApi {
     chat_id: number | string;
     voice: InputFile | string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     duration?: number;
     disable_notification?: boolean;
@@ -823,7 +825,7 @@ export default abstract class TelegramApi {
     allows_multiple_answers?: boolean;
     correct_option_id?: number;
     explanation?: string;
-    explanation_parse_mode?: string;
+    explanation_parse_mode?: ParseMode;
     explanation_entities?: MessageEntity[];
     open_period?: number;
     close_date?: number;
@@ -1277,7 +1279,7 @@ export default abstract class TelegramApi {
     chat_id?: number | string;
     message_id?: number;
     inline_message_id?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     entities?: MessageEntity[];
     disable_web_page_preview?: boolean;
     reply_markup?: InlineKeyboardMarkup;
@@ -1309,7 +1311,7 @@ export default abstract class TelegramApi {
     message_id?: number;
     inline_message_id?: string;
     caption?: string;
-    parse_mode?: string;
+    parse_mode?: ParseMode;
     caption_entities?: MessageEntity[];
     reply_markup?: InlineKeyboardMarkup;
   }) {
