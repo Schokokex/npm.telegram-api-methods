@@ -1,6 +1,6 @@
 {
   "name": "telegram-bot-methods",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "An abstract class for the Telegram Api Methods",
   "main": "lib/TelegramApi.js",
   "dependencies": {
