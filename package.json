@@ -3,6 +3,7 @@
   "version": "5.0.2",
   "description": "An abstract class for the Telegram Api Methods",
   "main": "lib/TelegramApi.js",
+  "types": "lib/TelegramApi.d.ts",
   "dependencies": {
     "telegram-bot-types": "^5.0.6"
   },
